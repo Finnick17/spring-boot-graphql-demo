@@ -1,0 +1,5 @@
+type Query{
+    author(id: ID!): Author
+
+    tutorial(id: ID!): Tutorial
+}

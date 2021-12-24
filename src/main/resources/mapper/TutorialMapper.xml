@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="per.graphql.mapper.TutorialMapper">
+    <resultMap id="BaseResultMap" type="per.graphql.domain.Tutorial">
+        <!--@mbg.generated-->
+        <!--@Table tutorial-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="author_id" jdbcType="INTEGER" property="authorId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, description, title, author_id
+    </sql>
+</mapper>

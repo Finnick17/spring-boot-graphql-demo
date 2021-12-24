@@ -1,0 +1,40 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.0-SNAPSHOT'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'per'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenLocal()
+	maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
+	mavenCentral()
+	jcenter()
+	maven { url "https://repo.spring.io/snapshot" }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-graphql'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'mysql:mysql-connector-java'
+	implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.3.4'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework:spring-webflux'
+	testImplementation 'org.springframework.graphql:spring-graphql-test'
+}
+
+test {
+	useJUnitPlatform()
+}

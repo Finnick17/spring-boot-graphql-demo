@@ -1,0 +1,13 @@
+"Query root"
+type Author {
+    age: Int!
+    id: ID!
+    name: String!
+}
+
+input CreateAuthorInput {
+    name: String!
+    age: Int!
+}
+
+
